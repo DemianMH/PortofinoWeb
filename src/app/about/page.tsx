@@ -28,7 +28,7 @@ const AboutPage = () => {
           </p>
           <h2 className="text-3xl font-bold text-red-700 mt-12 mb-4 font-serif">Our Philosophy</h2>
           <p className="mb-6">
-            We believe that great food starts with great ingredients. That's why we source our produce locally whenever possible and import the finest cheeses, meats, and olive oils directly from Italy. Our chefs pour their hearts into every dish, ensuring that each bite is an authentic and unforgettable experience. We're more than just a restaurant; we are a family dedicated to sharing our love for food with you.
+            We believe that great food starts with great ingredients. That&apos;s why we source our produce locally whenever possible and import the finest cheeses, meats, and olive oils directly from Italy. Our chefs pour their hearts into every dish, ensuring that each bite is an authentic and unforgettable experience. We&apos;re more than just a restaurant; we are a family dedicated to sharing our love for food with you.
           </p>
         </div>
       </div>

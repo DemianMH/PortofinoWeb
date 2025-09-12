@@ -1,6 +1,4 @@
 // src/components/Footer.tsx
-import Link from 'next/link'
-
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white">
