@@ -1,4 +1,3 @@
-// src/components/GiveawayModal.tsx
 'use client'
 import { motion, AnimatePresence } from 'framer-motion';
 import { GiveawayForm } from './GiveawayForm';
@@ -17,7 +16,7 @@ const GiveawayModal = ({ isOpen, onClose }: Props) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
-          onClick={onClose} // Cierra el modal al hacer clic en el fondo
+          onClick={onClose}
         >
           <motion.div
             initial={{ scale: 0.7, opacity: 0 }}
@@ -25,9 +24,8 @@ const GiveawayModal = ({ isOpen, onClose }: Props) => {
             exit={{ scale: 0.7, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             className="relative max-w-md w-full"
-            onClick={(e) => e.stopPropagation()} // Evita que el clic en el formulario cierre el modal
+            onClick={(e) => e.stopPropagation()}
           >
-            {/* Botón para cerrar */}
             <button 
               onClick={onClose} 
               className="absolute -top-3 -right-3 bg-white rounded-full p-1.5 shadow-lg z-10"
@@ -36,8 +34,6 @@ const GiveawayModal = ({ isOpen, onClose }: Props) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-
-            {/* Reutilizamos nuestro componente de formulario */}
             <GiveawayForm />
           </motion.div>
         </motion.div>

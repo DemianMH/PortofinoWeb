@@ -1,4 +1,3 @@
-// src/components/Navbar.tsx
 'use client'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -24,13 +23,21 @@ const Navbar = () => {
               <Image src="/logonegro.png" alt="Portofino Logo" width={120} height={40} />
             </Link>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center">
             <div className="ml-10 flex items-baseline space-x-4">
               {links.map((link) => (
                 <Link key={link.name} href={link.href} className="text-gray-700 hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md text-sm font-medium transition-colors">
                   {link.name}
                 </Link>
               ))}
+            </div>
+            <div className="ml-6 flex items-center gap-4">
+                 <Link href="https://www.doordash.com/" target="_blank" rel="noopener noreferrer" className="inline-block bg-yellow-500 text-gray-900 font-bold px-4 py-2 rounded-md hover:bg-yellow-400 transition-transform duration-300 hover:scale-105 text-sm">
+                    Order on DoorDash
+                </Link>
+                 <Link href="https://www.ubereats.com/" target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 text-white font-bold px-4 py-2 rounded-md hover:bg-green-600 transition-transform duration-300 hover:scale-105 text-sm">
+                    Order on Uber Eats
+                </Link>
             </div>
           </div>
           <div className="-mr-2 flex md:hidden">
@@ -63,6 +70,14 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ))}
+               <div className="mt-4 pt-4 border-t border-gray-200 flex flex-col space-y-2">
+                 <Link href="https://www.doordash.com/" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-yellow-500 text-gray-900 font-bold px-4 py-2 rounded-md hover:bg-yellow-400">
+                    Order on DoorDash
+                </Link>
+                 <Link href="https://www.ubereats.com/" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-green-500 text-white font-bold px-4 py-2 rounded-md hover:bg-green-600">
+                    Order on Uber Eats
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

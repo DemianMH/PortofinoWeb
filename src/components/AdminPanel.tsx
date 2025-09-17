@@ -1,4 +1,3 @@
-// src/components/AdminPanel.tsx
 'use client'
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -24,9 +23,8 @@ const AdminPanel = () => {
     setShowConfetti(false);
 
     try {
-      const response = await fetch('/api/get-entries', {
+      const response = await fetch(process.env.NEXT_PUBLIC_GET_ENTRIES_URL!, {
         headers: {
-          // Enviamos nuestra clave secreta para autenticarnos
           'Authorization': `Bearer ${process.env.NEXT_PUBLIC_ADMIN_SECRET_KEY}`
         }
       });
@@ -39,10 +37,10 @@ const AdminPanel = () => {
 
       if (entries.length === 0) {
         setError('There are no entries to draw from.');
+        setLoading(false);
         return;
       }
 
-      // ¡La magia del sorteo!
       const randomIndex = Math.floor(Math.random() * entries.length);
       const randomWinner = entries[randomIndex];
       
@@ -56,12 +54,6 @@ const AdminPanel = () => {
       setLoading(false);
     }
   };
-  
-  // Necesitamos pasar la clave secreta del servidor al cliente de forma segura
-  // Esto se hace a través de la configuración de Next.js
-  // Asegúrate de que la variable en .env.local sea NEXT_PUBLIC_ADMIN_SECRET_KEY
-  process.env.NEXT_PUBLIC_ADMIN_SECRET_KEY = process.env.NEXT_PUBLIC_ADMIN_SECRET_KEY || "P0rt0f1no.2025";
-
 
   return (
     <section className="bg-gray-800 text-white py-20">

@@ -1,4 +1,3 @@
-// src/components/FeaturedDishes.tsx
 'use client'
 import Image from 'next/image';
 import Link from 'next/link';
@@ -28,10 +27,10 @@ const FeaturedDishes = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 font-serif">
-            Our Signature Dishes
+            Our Beloved Dishes
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            Crafted with love from traditional family recipes.
+            Crafted with love from traditional recipes.
           </p>
         </div>
         <div className="mt-12 grid gap-10 lg:grid-cols-3">

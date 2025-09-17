@@ -1,4 +1,3 @@
-// src/app/about/page.tsx
 import Image from 'next/image';
 
 const AboutPage = () => {
@@ -6,7 +5,7 @@ const AboutPage = () => {
     <div className="bg-white">
       <div className="relative h-96">
         <Image
-          src="https://images.pexels.com/photos/4350119/pexels-photo-4350119.jpeg" // Puedes cambiar esto por una foto del interior del restaurante
+          src="https://images.pexels.com/photos/4350119/pexels-photo-4350119.jpeg"
           alt="Interior of Portofino restaurant"
           layout="fill"
           objectFit="cover"
@@ -21,14 +20,14 @@ const AboutPage = () => {
         <div className="text-lg text-gray-700">
           <h2 className="text-3xl font-bold text-red-700 mb-4 font-serif">A Taste of Italy in Conway</h2>
           <p className="mb-6">
-            Welcome to Portofino, where our passion for authentic Italian cuisine comes to life. Founded with the dream of bringing traditional recipes and the warmth of Italian hospitality to Conway, Arkansas, our restaurant is a place where families gather, friends celebrate, and delicious memories are made.
+            Welcome to Portofino, a family-owned restaurant where our passion for authentic Italian cuisine comes to life. Founded with the dream of bringing traditional recipes and the warmth of Italian hospitality to Conway, Arkansas, our restaurant is a place where families gather, friends celebrate, and delicious memories are made.
           </p>
           <p className="mb-6">
-            Our journey began with a simple idea: to use only the freshest, highest-quality ingredients to create dishes that are both classic and innovative. From our handmade pasta to our wood-fired pizzas, every meal is a testament to our commitment to excellence. 
+            Our journey began with a simple idea: to offer genuine Italian flavors using high-quality ingredients and products imported directly from Italy. From our pasta crafted in Italy to our oven-baked pizzas, every meal reflects our commitment to quality and tradition.
           </p>
           <h2 className="text-3xl font-bold text-red-700 mt-12 mb-4 font-serif">Our Philosophy</h2>
           <p className="mb-6">
-            We believe that great food starts with great ingredients. That&apos;s why we source our produce locally whenever possible and import the finest cheeses, meats, and olive oils directly from Italy. Our chefs pour their hearts into every dish, ensuring that each bite is an authentic and unforgettable experience. We&apos;re more than just a restaurant; we are a family dedicated to sharing our love for food with you.
+            We believe that great food begins with care and dedication. That&apos;s why we rely on trusted suppliers who provide us with authentic Italian products such as cheeses, cured meats, and olive oils. Our cooks prepare every dish with passion, ensuring that each plate delivers a comforting, authentic, and memorable dining experience. At Portofino, we are more than just a restaurant we are a family eager to share our love for Italian food with you.
           </p>
         </div>
       </div>
