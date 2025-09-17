@@ -32,10 +32,10 @@ const Navbar = () => {
               ))}
             </div>
             <div className="ml-6 flex items-center gap-4">
-                 <Link href="https://www.doordash.com/" target="_blank" rel="noopener noreferrer" className="inline-block bg-yellow-500 text-gray-900 font-bold px-4 py-2 rounded-md hover:bg-yellow-400 transition-transform duration-300 hover:scale-105 text-sm">
+                 <Link href="https://www.doordash.com/store/portofino-italian-restaurant-of-conway-conway-33148661/58690947/" target="_blank" rel="noopener noreferrer" className="inline-block bg-red-600 text-white font-bold px-4 py-2 rounded-md hover:bg-red-700 transition-transform duration-300 hover:scale-105 text-sm">
                     Order on DoorDash
                 </Link>
-                 <Link href="https://www.ubereats.com/" target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 text-white font-bold px-4 py-2 rounded-md hover:bg-green-600 transition-transform duration-300 hover:scale-105 text-sm">
+                 <Link href="https://www.ubereats.com/store/portofino-italian-restaurant-of-conway-hogan-lane/1EYvfmytT0qBt1uwECJ0LQ" target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 text-black font-bold px-4 py-2 rounded-md hover:bg-green-600 transition-transform duration-300 hover:scale-105 text-sm">
                     Order on Uber Eats
                 </Link>
             </div>
@@ -71,10 +71,10 @@ const Navbar = () => {
                 </Link>
               ))}
                <div className="mt-4 pt-4 border-t border-gray-200 flex flex-col space-y-2">
-                 <Link href="https://www.doordash.com/" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-yellow-500 text-gray-900 font-bold px-4 py-2 rounded-md hover:bg-yellow-400">
+                 <Link href="https://www.doordash.com/store/portofino-italian-restaurant-of-conway-conway-33148661/58690947/" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-red-600 text-white font-bold px-4 py-2 rounded-md hover:bg-red-700">
                     Order on DoorDash
                 </Link>
-                 <Link href="https://www.ubereats.com/" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-green-500 text-white font-bold px-4 py-2 rounded-md hover:bg-green-600">
+                 <Link href="https://www.ubereats.com/store/portofino-italian-restaurant-of-conway-hogan-lane/1EYvfmytT0qBt1uwECJ0LQ" target="_blank" rel="noopener noreferrer" className="block w-full text-center bg-green-500 text-black font-bold px-4 py-2 rounded-md hover:bg-green-600">
                     Order on Uber Eats
                 </Link>
               </div>

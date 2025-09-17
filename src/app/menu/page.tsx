@@ -86,7 +86,7 @@ const menuData: MenuCategory[] = [
             { name: "Shrimp Parmigiana", price: "18.99" },
             { name: "Veal Parmigiana", price: "18.99" },
             { name: "Tortellini Alla Panna", description: "Sherry wine pink sauce over tortellini pasta", price: "14.99" },
-            { name: "Sausage Pizzaiola", description: "Italian sausage w/garlic & basil in a spicy alla panna sauce over ziti", price: "15.99" },
+            { name: "Sausage Pizzaiola", description: "Italian sausage w/garlic & basil in a spicy alla panna sauce over ziti", price: "15.99", icon: <SpicyIcon /> },
             { name: "Sausage & Pepper Parmigiana", description: "Italian sausage & bell peppers with marinara topped w/mozzarella over spaghetti", price: "16.99" },
             { name: "Spaghetti The Works", description: "Meatballs, meatsauce, mushrooms & sausage", price: "17.99" },
             { name: "Linguine Carbonara", description: "Sautéed fresh garlic, onions, mushrooms & bacon w/alfredo over linguine", price: "17.99" },
@@ -109,7 +109,7 @@ const menuData: MenuCategory[] = [
             { name: "Viva Italia", description: "Chicken, mushrooms and italian sausage w/alfredo sauce over ziti", price: "21.99" },
             { name: "Chef's Favorite", description: "Four shrimp, chicken and capers w/alfredo sauce over tortellini", price: "22.99" },
             { name: "Chicken Genevis", description: "Chicken breast, mushrooms w/alla panna sauce topped w/mozzarella cheese over spaghetti", price: "21.99" },
-            { name: "Baked Tuscany", description: "Sautéed garlic, basil, spinach, shrimp, chicken & bacon w/spicy alla panna sauce topped w/melted mozzarella over ziti", price: "21.99" },
+            { name: "Baked Tuscany", description: "Sautéed garlic, basil, spinach, shrimp, chicken & bacon w/spicy alla panna sauce topped w/melted mozzarella over ziti", price: "21.99", icon: <SpicyIcon /> },
             { name: "Tour of Italy", description: "Lasagna, chicken parmigiana & fettuccine alfredo", price: "24.99" }
         ]
     },
@@ -118,7 +118,7 @@ const menuData: MenuCategory[] = [
         items: [
             { name: "Baked Shrimp Florentine", description: "Shrimp, spinach, mushrooms, garlic & basil w/alfredo & melted mozzarella over ziti", price: "22.99" },
             { name: "Linguine Tutto Mare", description: "Shrimp, mussels, chopped clams, scallops & calamari w/light white wine sauce over linguine", price: "22.99" },
-            { name: "Mussels & Shrimp Alla Diavola", description: "Mussels, shrimp, onions, garlic & basil w/spicy marinara over linguine", price: "22.99" },
+            { name: "Mussels & Shrimp Alla Diavola", description: "Mussels, shrimp, onions, garlic & basil w/spicy marinara over linguine", price: "22.99", icon: <SpicyIcon /> },
             { name: "Lobster Ravioli", description: "Four lobster stuffed ravioli shells w/alla panna sauce", price: "20.99", note: "*Add 4 shrimp for $4 extra" },
             { name: "Salmon & Shrimp Amore", description: "Salmon, 3 shrimp, capers, roasted red peppers and spinach w/alfredo sauce over linguine", price: "23.99" }
         ]
@@ -128,9 +128,9 @@ const menuData: MenuCategory[] = [
         note: "Chicken $17.99 | Shrimp $18.99 | Salmon (8 oz) $22.99 | Veal $23.99 | Ribeye (8 oz) $25.99",
         items: [
             { name: "Picatta", description: "Sautéed capers w/white wine lemon sauce over angel hair", price: "15.99" },
-            { name: "Alla Diavola", description: "Garlic & basil w/spicy light tomato sauce over spaghetti", price: "15.99" },
+            { name: "Alla Diavola", description: "Garlic & basil w/spicy light tomato sauce over spaghetti", price: "15.99", icon: <SpicyIcon /> },
             { name: "Tortellini Modo Mio", description: "Broccoli & tomatoes w/light white wine sauce over tortellini", price: "15.99" },
-            { name: "Louisiana", description: "Garlic, mushrooms & broccoli with creamy louisiana sauce over linguine", price: "15.99" },
+            { name: "Louisiana", description: "Garlic, mushrooms & broccoli with creamy louisiana sauce over linguine", price: "15.99", icon: <SpicyIcon /> },
             { name: "Fettuccine Alfredo", description: "Creamy white wine sauce served over fettuccini", price: "15.99" },
             { name: "Portofino", description: "Broccoli and tomatoes in alfredo sauce served over ziti pasta", price: "15.99" },
             { name: "Marsala", description: "Mushrooms sautéed w/garlic & basil in a marsala wine sauce over spaghetti", price: "15.99" },
@@ -138,7 +138,7 @@ const menuData: MenuCategory[] = [
             { name: "Tuscan", description: "Garlic, sun-dried tomatoes, artichoke hearts & spinach w/alla panna sauce over spaghetti", price: "15.99" },
             { name: "Pomodoro", description: "Fresh tomatoes, basil, sherry wine w/light marinara sauce served over ziti", price: "15.99" },
             { name: "Dama Bianca", description: "Garlic, basil & mushrooms w/alfredo over spaghetti", price: "15.99" },
-            { name: "Murphy", description: "Mushrooms, artichokes & jalapeños w/alla panna sauce over spaghetti", price: "15.99" }
+            { name: "Murphy", description: "Mushrooms, artichokes & jalapeños w/alla panna sauce over spaghetti", price: "15.99", icon: <SpicyIcon /> }
         ]
     },
     {
