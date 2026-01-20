@@ -5,19 +5,19 @@ import { motion } from 'framer-motion';
 
 const dishes = [
   {
-    name: 'Lasagna',
-    description: 'Layers of fresh pasta, rich meat sauce, mozzarella, and parmesan.',
-    image: 'https://images.unsplash.com/photo-1709429790175-b02bb1b19207?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    name: 'Baked Tuscany',
+    description: 'Shrimp, chicken, bacon and spinach w/spicy alla panna sauce topped w/melted mozzarella over ziti.',
+    image: '/Tuscany1.jpg'
   },
   {
-    name: 'Tour of Italy',
-    description: 'A perfect trio of Lasagna, Chicken Parmigiana & Fettuccine Alfredo.',
-    image: 'https://images.pexels.com/photos/4371848/pexels-photo-4371848.jpeg'
+    name: 'Linguine Tutto Mare',
+    description: 'Shrimp, mussels, clams, scallops & calamari w/light white wine sauce over linguine.',
+    image: '/TuttoMare2.jpg'
   },
   {
-    name: 'Margherita Pizza',
-    description: 'Classic combination of fresh mozzarella, basil, and tomato sauce.',
-    image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    name: 'Pizza and more...',
+    description: 'A crispy yet soft base, topped with tomato sauce, melted mozzarella cheese, and your choice of fresh ingredients.',
+    image: '/PizzaPepperoni1.jpg'
   }
 ];
 
@@ -27,32 +27,32 @@ const FeaturedDishes = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 font-serif">
-            Our Beloved Dishes
+            Our Specialties
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            Crafted with love from traditional recipes.
+            Authentic flavors crafted with passion.
           </p>
         </div>
         <div className="mt-12 grid gap-10 lg:grid-cols-3">
           {dishes.map((dish, index) => (
             <motion.div
               key={dish.name}
-              className="group rounded-lg overflow-hidden shadow-lg"
+              className="group rounded-lg overflow-hidden shadow-lg flex flex-col"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="relative h-64">
+              <div className="relative h-64 w-full">
                 <Image
                   src={dish.image}
                   alt={dish.name}
-                  layout="fill"
-                  objectFit="cover"
-                  className="transition-transform duration-500 group-hover:scale-110"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <div className="p-6 bg-gray-50">
+              <div className="p-6 bg-gray-50 flex-grow">
                 <h3 className="text-xl font-bold text-gray-800">{dish.name}</h3>
                 <p className="mt-2 text-gray-600">{dish.description}</p>
               </div>

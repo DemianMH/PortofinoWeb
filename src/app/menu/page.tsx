@@ -1,6 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 
-const SpicyIcon = () => <span title="Spicy">🌶️</span>;
+const SpicyIcon = () => <span title="Spicy" className="ml-1 text-lg">🌶️</span>;
 
 type MenuItem = {
     name: string;
@@ -8,6 +9,7 @@ type MenuItem = {
     description?: string;
     icon?: React.ReactNode;
     note?: string;
+    image?: string;
 };
 
 type MenuCategory = {
@@ -109,7 +111,7 @@ const menuData: MenuCategory[] = [
             { name: "Viva Italia", description: "Chicken, mushrooms and italian sausage w/alfredo sauce over ziti", price: "21.99" },
             { name: "Chef's Favorite", description: "Four shrimp, chicken and capers w/alfredo sauce over tortellini", price: "22.99" },
             { name: "Chicken Genevis", description: "Chicken breast, mushrooms w/alla panna sauce topped w/mozzarella cheese over spaghetti", price: "21.99" },
-            { name: "Baked Tuscany", description: "Sautéed garlic, basil, spinach, shrimp, chicken & bacon w/spicy alla panna sauce topped w/melted mozzarella over ziti", price: "21.99", icon: <SpicyIcon /> },
+            { name: "Baked Tuscany", description: "Sautéed garlic, basil, spinach, shrimp, chicken & bacon w/spicy alla panna sauce topped w/melted mozzarella over ziti", price: "21.99", icon: <SpicyIcon />, image: "/Tuscany1.jpg" },
             { name: "Tour of Italy", description: "Lasagna, chicken parmigiana & fettuccine alfredo", price: "24.99" }
         ]
     },
@@ -117,7 +119,7 @@ const menuData: MenuCategory[] = [
         category: "Seafood",
         items: [
             { name: "Baked Shrimp Florentine", description: "Shrimp, spinach, mushrooms, garlic & basil w/alfredo & melted mozzarella over ziti", price: "22.99" },
-            { name: "Linguine Tutto Mare", description: "Shrimp, mussels, chopped clams, scallops & calamari w/light white wine sauce over linguine", price: "22.99" },
+            { name: "Linguine Tutto Mare", description: "Shrimp, mussels, chopped clams, scallops & calamari w/light white wine sauce over linguine", price: "22.99", image: "/TuttoMare2.jpg" },
             { name: "Mussels & Shrimp Alla Diavola", description: "Mussels, shrimp, onions, garlic & basil w/spicy marinara over linguine", price: "22.99", icon: <SpicyIcon /> },
             { name: "Lobster Ravioli", description: "Four lobster stuffed ravioli shells w/alla panna sauce", price: "20.99", note: "*Add 4 shrimp for $4 extra" },
             { name: "Salmon & Shrimp Amore", description: "Salmon, 3 shrimp, capers, roasted red peppers and spinach w/alfredo sauce over linguine", price: "23.99" }
@@ -154,8 +156,8 @@ const menuData: MenuCategory[] = [
         category: "Pizza",
         note: "Toppings: pepperoni, canadian bacon, hamburger, sausage, bacon, jalapeños, spinach, mushrooms, onion, green peppers, black olives, basil, tomato.",
         items: [
-            { name: 'Small 10"', description: "$1 per topping", price: "8.99" },
-            { name: 'Large 16"', description: "$2 per topping (*Takeaway only)", price: "14.99" }
+            { name: 'Small 10"', description: "$1 per topping", price: "8.99", image: "/PizzaPepperoni3.jpg" },
+            { name: 'Large 16"', description: "$2 per topping (*Takeaway only)", price: "14.99", image: "/PizzaPepperoni1.jpg" }
         ]
     }
 ];
@@ -164,29 +166,43 @@ const MenuPage = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">Our Menu</h1>
-          <p className="mt-4 text-xl text-gray-500">Delightful Italian dishes made with the freshest ingredients.</p>
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-extrabold text-gray-900 sm:text-5xl font-serif">Our Menu</h1>
+          <p className="mt-4 text-xl text-gray-600">Delightful Italian dishes made with the freshest ingredients.</p>
         </div>
 
         {menuData.map((category) => (
-          <div key={category.category} className="mb-12">
-            <h2 className="text-3xl font-bold text-center text-red-700 mb-4 font-serif">{category.category}</h2>
+          <div key={category.category} className="mb-16">
+            <h2 className="text-3xl font-bold text-center text-red-700 mb-6 font-serif border-b-2 border-red-100 pb-2 inline-block w-full">{category.category}</h2>
             {category.note && (
-              <p className="text-center text-gray-800 -mt-2 mb-6 text-base">{category.note}</p>
+              <p className="text-center text-gray-600 -mt-2 mb-8 text-base italic">{category.note}</p>
             )}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8">
               {category.items.map((item) => (
-                <div key={item.name} className="py-2">
-                  <div className="flex justify-between items-baseline">
-                    <h3 className="text-lg font-semibold text-gray-800">
-                      {item.name} {item.icon}
-                    </h3>
-                    <div className="flex-grow border-b border-dashed border-gray-300 mx-2"></div>
-                    <p className="text-lg font-semibold text-gray-800">${item.price}</p>
+                <div key={item.name} className={`bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow ${item.image ? 'row-span-2' : ''}`}>
+                  <div className="flex flex-col sm:flex-row gap-6">
+                    <div className="flex-grow order-2 sm:order-1">
+                        <div className="flex justify-between items-baseline mb-2">
+                            <h3 className="text-xl font-bold text-gray-800">
+                            {item.name} {item.icon}
+                            </h3>
+                            <span className="text-lg font-bold text-red-700 ml-4">${item.price}</span>
+                        </div>
+                        {item.description && <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>}
+                        {item.note && <p className="text-gray-500 mt-2 text-xs italic">{item.note}</p>}
+                    </div>
+                    {item.image && (
+                        <div className="order-1 sm:order-2 flex-shrink-0 w-full aspect-square sm:w-40 sm:h-40 sm:aspect-auto relative rounded-md overflow-hidden shadow-sm">
+                            <Image 
+                                src={item.image} 
+                                alt={item.name} 
+                                fill 
+                                sizes="(max-width: 768px) 100vw, 160px"
+                                className="object-cover"
+                            />
+                        </div>
+                    )}
                   </div>
-                  {item.description && <p className="text-gray-600 mt-1 text-sm">{item.description}</p>}
-                  {item.note && <p className="text-gray-600 mt-1 text-sm italic">{item.note}</p>}
                 </div>
               ))}
             </div>
