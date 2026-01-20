@@ -18,7 +18,7 @@ const Footer = () => {
             <p className="text-gray-400">
               Phone: <a href="tel:+15013586133" className="hover:text-yellow-400">+1 501-358-6133</a>
             </p>
-             <p className="text-gray-400">
+            <p className="text-gray-400">
               <a href="https://www.facebook.com/PortofinoltalianRestaurant" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">Facebook</a>
             </p>
           </div>

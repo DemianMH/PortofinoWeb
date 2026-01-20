@@ -1,9 +1,7 @@
 'use client'
 import { useState, useEffect, Suspense } from 'react';
-import Giveaway from "@/components/Giveaway";
 import FeaturedDishes from "@/components/FeaturedDishes";
 import { motion } from 'framer-motion';
-import GiveawayModal from '@/components/GiveawayModal';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import AdminPanel from '@/components/AdminPanel';
@@ -45,22 +43,11 @@ function AdminToggle() {
 }
 
 export default function HomePage() {
-  const [isModalOpen, setModalOpen] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setModalOpen(true);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div>
-        <GiveawayModal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
         <Hero />
         <FeaturedDishes />
-        <Giveaway />
         <AdminToggle />
       </div>
     </Suspense>
